@@ -1,0 +1,82 @@
+2019-10-01T19:43:38.282453+00:00 app[api]: Enable Logplex by user ss12933@nyu.edu
+2019-10-01T19:43:38.282453+00:00 app[api]: Release v2 created by user ss12933@nyu.edu
+2019-10-01T19:43:36.03246+00:00 app[api]: Initial release by user ss12933@nyu.edu
+2019-10-01T19:43:36.03246+00:00 app[api]: Release v1 created by user ss12933@nyu.edu
+2019-10-01T19:44:18+00:00 app[api]: Build started by user ss12933@nyu.edu
+2019-10-01T19:45:16.513763+00:00 app[api]: Release v5 created by user ss12933@nyu.edu
+2019-10-01T19:45:16.532096+00:00 app[api]: Scaled to web@1:Free by user ss12933@nyu.edu
+2019-10-01T19:45:16.197781+00:00 app[api]: @ref:postgresql-clean-81569 completed provisioning, setting DATABASE_URL. by user ss12933@nyu.edu
+2019-10-01T19:45:16.513763+00:00 app[api]: Deploy 783e1241 by user ss12933@nyu.edu
+2019-10-01T19:45:16.176866+00:00 app[api]: Attach DATABASE (@ref:postgresql-clean-81569) by user ss12933@nyu.edu
+2019-10-01T19:45:16.197781+00:00 app[api]: Release v4 created by user ss12933@nyu.edu
+2019-10-01T19:45:16.176866+00:00 app[api]: Running release v3 commands by user ss12933@nyu.edu
+2019-10-01T19:45:21.238704+00:00 heroku[web.1]: Starting process with command `gunicorn mysite.wsgi`
+2019-10-01T19:45:24.037932+00:00 app[web.1]: [2019-10-01 19:45:24 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-10-01T19:45:24.0386+00:00 app[web.1]: [2019-10-01 19:45:24 +0000] [4] [INFO] Listening at: http://0.0.0.0:56887 (4)
+2019-10-01T19:45:24.03869+00:00 app[web.1]: [2019-10-01 19:45:24 +0000] [4] [INFO] Using worker: sync
+2019-10-01T19:45:24.042332+00:00 app[web.1]: [2019-10-01 19:45:24 +0000] [10] [INFO] Booting worker with pid: 10
+2019-10-01T19:45:24.046576+00:00 app[web.1]: [2019-10-01 19:45:24 +0000] [11] [INFO] Booting worker with pid: 11
+2019-10-01T19:45:25.103537+00:00 heroku[web.1]: State changed from starting to up
+2019-10-01T19:45:25+00:00 app[api]: Build succeeded
+2019-10-01T19:45:33.977007+00:00 heroku[web.1]: source=web.1 dyno=heroku.148186847.baed8945-a0b0-495e-a292-1463a9a8b3b2 sample#memory_total=67.37MB sample#memory_rss=67.36MB sample#memory_cache=0.00MB sample#memory_swap=0.00MB sample#memory_pgpgin=18286pages sample#memory_pgpgout=1040pages sample#memory_quota=512.00MB
+2019-10-01T19:45:38.652655+00:00 app[web.1]: Internal Server Error: /polls/
+2019-10-01T19:45:38.652694+00:00 app[web.1]: Traceback (most recent call last):
+2019-10-01T19:45:38.652697+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+2019-10-01T19:45:38.652699+00:00 app[web.1]: return self.cursor.execute(sql, params)
+2019-10-01T19:45:38.652702+00:00 app[web.1]: psycopg2.errors.UndefinedTable: relation "polls_question" does not exist
+2019-10-01T19:45:38.652704+00:00 app[web.1]: LINE 1: ..."question_text", "polls_question"."pub_date" FROM "polls_que...
+2019-10-01T19:45:38.652707+00:00 app[web.1]: ^
+2019-10-01T19:45:38.65271+00:00 app[web.1]: 
+2019-10-01T19:45:38.652712+00:00 app[web.1]: 
+2019-10-01T19:45:38.652714+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2019-10-01T19:45:38.652716+00:00 app[web.1]: 
+2019-10-01T19:45:38.652717+00:00 app[web.1]: Traceback (most recent call last):
+2019-10-01T19:45:38.652719+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2019-10-01T19:45:38.652721+00:00 app[web.1]: response = get_response(request)
+2019-10-01T19:45:38.652724+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+2019-10-01T19:45:38.652726+00:00 app[web.1]: response = self.process_exception_by_middleware(e, request)
+2019-10-01T19:45:38.652729+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+2019-10-01T19:45:38.652731+00:00 app[web.1]: response = response.render()
+2019-10-01T19:45:38.652733+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+2019-10-01T19:45:38.652735+00:00 app[web.1]: self.content = self.rendered_content
+2019-10-01T19:45:38.652737+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+2019-10-01T19:45:38.652739+00:00 app[web.1]: content = template.render(context, self._request)
+2019-10-01T19:45:38.652741+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+2019-10-01T19:45:38.652743+00:00 app[web.1]: return self.template.render(context)
+2019-10-01T19:45:38.652745+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+2019-10-01T19:45:38.652746+00:00 app[web.1]: return self._render(context)
+2019-10-01T19:45:38.652748+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+2019-10-01T19:45:38.65275+00:00 app[web.1]: return self.nodelist.render(context)
+2019-10-01T19:45:38.652752+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+2019-10-01T19:45:38.652754+00:00 app[web.1]: bit = node.render_annotated(context)
+2019-10-01T19:45:38.652756+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+2019-10-01T19:45:38.652758+00:00 app[web.1]: return self.render(context)
+2019-10-01T19:45:38.65276+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/template/defaulttags.py", line 308, in render
+2019-10-01T19:45:38.652762+00:00 app[web.1]: if match:
+2019-10-01T19:45:38.652764+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/models/query.py", line 278, in __bool__
+2019-10-01T19:45:38.652766+00:00 app[web.1]: self._fetch_all()
+2019-10-01T19:45:38.652768+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+2019-10-01T19:45:38.65277+00:00 app[web.1]: self._result_cache = list(self._iterable_class(self))
+2019-10-01T19:45:38.652772+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+2019-10-01T19:45:38.652774+00:00 app[web.1]: results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+2019-10-01T19:45:38.652776+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+2019-10-01T19:45:38.652778+00:00 app[web.1]: cursor.execute(sql, params)
+2019-10-01T19:45:38.65278+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+2019-10-01T19:45:38.652782+00:00 app[web.1]: return super().execute(sql, params)
+2019-10-01T19:45:38.652784+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+2019-10-01T19:45:38.652791+00:00 app[web.1]: return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+2019-10-01T19:45:38.652794+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+2019-10-01T19:45:38.652796+00:00 app[web.1]: return executor(sql, params, many, context)
+2019-10-01T19:45:38.652798+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+2019-10-01T19:45:38.6528+00:00 app[web.1]: return self.cursor.execute(sql, params)
+2019-10-01T19:45:38.652802+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+2019-10-01T19:45:38.652804+00:00 app[web.1]: raise dj_exc_value.with_traceback(traceback) from exc_value
+2019-10-01T19:45:38.652806+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+2019-10-01T19:45:38.652808+00:00 app[web.1]: return self.cursor.execute(sql, params)
+2019-10-01T19:45:38.65281+00:00 app[web.1]: django.db.utils.ProgrammingError: relation "polls_question" does not exist
+2019-10-01T19:45:38.652812+00:00 app[web.1]: LINE 1: ..."question_text", "polls_question"."pub_date" FROM "polls_que...
+2019-10-01T19:45:38.652813+00:00 app[web.1]: ^
+2019-10-01T19:45:38.652823+00:00 app[web.1]: 
+2019-10-01T19:45:38.65353+00:00 app[web.1]: 10.13.235.37 - - [01/Oct/2019:19:45:38 +0000] "GET /polls/ HTTP/1.1" 500 147078 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+2019-10-01T19:45:38.66533+00:00 heroku[router]: at=info method=GET path="/polls/" host=swe-app1.herokuapp.com request_id=5789363d-d40f-4333-8a15-cadad0297320 fwd="216.165.95.160" dyno=web.1 connect=1ms service=188ms status=500 bytes=147289 protocol=https
+2019-10-01T19:45:53.608442+00:00 heroku[web.1]: source=web.1 dyno=heroku.148186847.baed8945-a0b0-495e-a292-1463a9a8b3b2 sample#memory_total=71.26MB sample#memory_rss=71.25MB sample#memory_cache=0.02MB sample#memory_swap=0.00MB sample#memory_pgpgin=19301pages sample#memory_pgpgout=1058pages sample#memory_quota=512.00MB
