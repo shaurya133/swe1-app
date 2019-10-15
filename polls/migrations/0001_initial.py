@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 (
                     "id",
-                     models.AutoField(
+                    models.AutoField(
                             auto_created=True,
                             primary_key=True,
                             serialize=False,
@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
             fields=[
                 (
                     "id",
-                     models.AutoField(
+                    models.AutoField(
                             auto_created=True,
                             primary_key=True,
                             serialize=False,
@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
                 ("votes", models.IntegerField(default=0)),
                 (
                     "question",
-                     models.ForeignKey(
+                    models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE, to="polls.Question"
                      ),
                 ),
