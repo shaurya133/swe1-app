@@ -10,21 +10,9 @@ before_script:
   - python manage.py migrate
   - python manage.py collectstatic --noinput
 
-<<<<<<< HEAD
-
 script:
   - flake8 .
-  - coverage run manage.py test
   - coverage run --source=mysite,polls manage.py test
 
 after_script:
- - coveralls
-=======
-script:
-  - black --check .
-  - flake8 .
-  - coverage run --source=swe1,polls manage.py test
-
-after_script:
-  - coveralls
->>>>>>> 508d30f067d528afa40a218d12fc0ad467871878
+ -coveralls
