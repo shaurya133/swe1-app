@@ -1,0 +1,10 @@
+
+#*#
+*.pyc
+
+ 
+staticfiles/
+
+
+.coverage
+htmlcov/
