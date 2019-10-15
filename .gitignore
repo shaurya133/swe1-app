@@ -1,10 +1,8 @@
-
+*~
 #*#
 *.pyc
 
- 
 staticfiles/
-
 
 .coverage
 htmlcov/
