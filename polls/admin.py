@@ -19,4 +19,5 @@ class QuestionAdmin(admin.ModelAdmin):
     search_fields = ["question_text"]
 
 
-    admin.site.register(Question, Choice)
+    admin.site.register(Question)
+    admin.site.register(Choice)
